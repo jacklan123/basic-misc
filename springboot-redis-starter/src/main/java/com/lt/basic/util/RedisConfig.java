@@ -1,7 +1,10 @@
 package com.lt.basic.util;
 
 import com.lt.basic.util.redis.KryoRedisSerializer;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 
@@ -11,6 +14,8 @@ import java.net.UnknownHostException;
  * @author lantian
  * @date 2019/09/20
  */
+@Configuration
+@AutoConfigureAfter(RedisAutoConfiguration.class)
 public class RedisKryoTemplate {
 
 
