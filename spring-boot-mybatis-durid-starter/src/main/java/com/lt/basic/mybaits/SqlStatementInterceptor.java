@@ -1,4 +1,4 @@
-package com.fangdd.misc.mybaits;
+package com.lt.basic.mybaits;
 
 import com.dianping.cat.Cat;
 import com.dianping.cat.CatConstants;

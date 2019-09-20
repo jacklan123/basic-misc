@@ -1,6 +1,6 @@
-package com.fangdd.misc.mybaits;
+package com.lt.basic.mybaits;
 
-import com.fangdd.misc.datasource.DynamicDataSource;
+import com.lt.basic.datasource.DynamicDataSource;
 import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;

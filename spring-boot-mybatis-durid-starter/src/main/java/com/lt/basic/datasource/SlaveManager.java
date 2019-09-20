@@ -1,4 +1,4 @@
-package com.fangdd.misc.datasource;
+package com.lt.basic.datasource;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -13,10 +13,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class SlaveManager {
 	
-	@Pointcut("@annotation(com.fangdd.misc.annotation.UseSlave)")
+	@Pointcut("@annotation(com.lt.basic.annotation.UseSlave)")
 	private void useSlave(){}
 	
-	@Pointcut("@annotation(com.fangdd.misc.annotation.UseMaster)")
+	@Pointcut("@annotation(com.lt.basic.annotation.UseMaster)")
 	private void useMaster(){}
 	
 	@Around("useMaster()")

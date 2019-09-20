@@ -1,4 +1,4 @@
-package com.fangdd.misc.datasource;
+package com.lt.basic.datasource;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;

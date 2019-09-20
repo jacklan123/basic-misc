@@ -1,4 +1,4 @@
-package com.fangdd.misc.datasource;
+package com.lt.basic.datasource;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
