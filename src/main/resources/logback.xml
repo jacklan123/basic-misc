@@ -1,0 +1,44 @@
+<configuration scan="true" scanPeriod="2 seconds">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %X{fddTraceId} %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="APPLOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOGS_DIR:-logs}/logFile.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>3</MaxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %X{fddTraceId} %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="ERRLOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOGS_DIR:-logs}/logFile.%d{yyyy-MM-dd}.log.error</FileNamePattern>
+            <MaxHistory>3</MaxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %X{fddTraceId} %msg%n</pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <logger name="com.fangdd" additivity="true" level="INFO">
+        <!--<appender-ref ref="flume" />-->
+    </logger>
+
+    <root>
+        <level value="INFO" />
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="APPLOG" />
+        <appender-ref ref="ERRLOG" />
+    </root>
+
+</configuration>
