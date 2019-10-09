@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.master",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.fangdd.organization.server.config.DataSourceConfig",
+      "sourceMethod": "masterDS()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

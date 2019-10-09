@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.net.UnknownHostException;
 
@@ -16,7 +17,7 @@ import java.net.UnknownHostException;
  */
 @Configuration
 @AutoConfigureAfter(RedisAutoConfiguration.class)
-public class RedisKryoTemplate {
+public class RedisConfig {
 
 
 
@@ -25,9 +26,9 @@ public class RedisKryoTemplate {
         UnknownHostException {
         RedisTemplate<Object, Object> template = new RedisTemplate();
         template.setConnectionFactory(redisConnectionFactory);
-        template.setKeySerializer(new KryoRedisSerializer(Object.class));
+        template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(new KryoRedisSerializer(Object.class));
-        template.setHashKeySerializer(new KryoRedisSerializer(Object.class));
+        template.setHashKeySerializer(new StringRedisSerializer());
         template.setHashValueSerializer(new KryoRedisSerializer(Object.class));
         return template;
     }

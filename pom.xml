@@ -10,6 +10,8 @@
     <modules>
         <module>spring-boot-mybatis-durid-starter</module>
         <module>springboot-redis-starter</module>
+        <module>netty-rpc</module>
+        <module>b-organization-service-server</module>
     </modules>
     <packaging>pom</packaging>
 

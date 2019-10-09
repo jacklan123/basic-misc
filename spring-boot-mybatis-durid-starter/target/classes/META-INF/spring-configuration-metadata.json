@@ -3,13 +3,13 @@
     {
       "name": "spring.datasource.master",
       "type": "javax.sql.DataSource",
-      "sourceType": "com.fangdd.misc.datasource.DataSourceConfig",
+      "sourceType": "com.lt.basic.datasource.DataSourceConfig",
       "sourceMethod": "masterDS()"
     },
     {
       "name": "spring.datasource.slave",
       "type": "javax.sql.DataSource",
-      "sourceType": "com.fangdd.misc.datasource.DataSourceConfig",
+      "sourceType": "com.lt.basic.datasource.DataSourceConfig",
       "sourceMethod": "slaveDS()"
     }
   ],

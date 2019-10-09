@@ -36,6 +36,7 @@ public class KryoRedisSerializer<T> implements RedisSerializer<T> {
             Output output = new Output(bos)){
             kryo = kryoPool.borrowObject();
             kryo.writeClassAndObject(output, t);
+            output.close();
             return bos.toByteArray();
         }catch(Exception e){
             throw new RuntimeException(e);
@@ -58,6 +59,7 @@ public class KryoRedisSerializer<T> implements RedisSerializer<T> {
             kryo = kryoPool.borrowObject();
             @SuppressWarnings("unchecked")
             T t = (T) kryo.readClassAndObject(input);
+            input.close();
             return t;
         }catch(Exception e){
             throw new RuntimeException(e);

@@ -1,9 +1,9 @@
-com/fangdd/misc/datasource/DataSourceContextHolder.class
+com/lt/basic/mybaits/SqlStatementInterceptor.class
+com/lt/basic/datasource/DataSourceConfig.class
+com/lt/basic/annotation/UseSlave.class
 META-INF/spring-configuration-metadata.json
-com/fangdd/misc/mybaits/MybatisConfig.class
-com/fangdd/misc/mybaits/SqlStatementInterceptor.class
-com/fangdd/misc/annotation/UseMaster.class
-com/fangdd/misc/annotation/UseSlave.class
-com/fangdd/misc/datasource/DataSourceConfig.class
-com/fangdd/misc/datasource/DynamicDataSource.class
-com/fangdd/misc/datasource/SlaveManager.class
+com/lt/basic/mybaits/MybatisConfig.class
+com/lt/basic/annotation/UseMaster.class
+com/lt/basic/datasource/DataSourceContextHolder.class
+com/lt/basic/datasource/SlaveManager.class
+com/lt/basic/datasource/DynamicDataSource.class
