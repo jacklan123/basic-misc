@@ -26,7 +26,7 @@
         <docker.project.id>marketing.realtor.ap.fdd</docker.project.id>
         <start-class>com.fangdd.ap.realtor.marketing.Application</start-class>
         <commons-lang3.version>3.7</commons-lang3.version>
-        <apache.dubbo.version>2.7.1</apache.dubbo.version>
+        <apache.dubbo.version>2.7.15</apache.dubbo.version>
         <curator.version>2.13.0</curator.version>
         <lombok.version>1.18.8</lombok.version>
         <guava.version>28.0-jre</guava.version>
